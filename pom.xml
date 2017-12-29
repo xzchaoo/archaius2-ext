@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.xzchaoo.archaius2</groupId>
+	<artifactId>archaius2-ext</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<modules>
+		<module>archaius2-ext-core</module>
+		<module>archaius2-ext-spring</module>
+		<module>archaius2-ext-spring-boot-starter</module>
+		<module>archaius2-ext-spring-boot-starter-web-demo</module>
+	</modules>
+
+	<parent>
+		<groupId>com.xzchaoo.parent</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.0.25</version>
+	</parent>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<archaius2.version>2.2.13</archaius2.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.netflix.archaius</groupId>
+				<artifactId>archaius2-api</artifactId>
+				<version>${archaius2.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.netflix.archaius</groupId>
+				<artifactId>archaius2-core</artifactId>
+				<version>${archaius2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.xzchaoo.archaius2</groupId>
+				<artifactId>archaius2-ext-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.xzchaoo.archaius2</groupId>
+				<artifactId>archaius2-ext-spring</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.xzchaoo.archaius2</groupId>
+				<artifactId>archaius2-ext-spring-boot-starter</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+</project>
